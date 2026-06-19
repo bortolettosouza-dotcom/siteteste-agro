@@ -1,0 +1,188 @@
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5; /* Fundo off-white suave */
+    color: #2d3748; 
+    line-height: 1.6;
+}
+
+/* ========================================================== */
+/* CABEÇALHO: EXPANDIDO E COM A IMAGEM EM DESTAQUE            */
+/* ========================================================== */
+header {
+    /* Película escura bem leve (0.35 a 0.55) apenas para o texto branco não sumir */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('fundo-agro.jpg');
+    
+    background-size: cover;          /* Faz a imagem expandir e cobrir tudo de ponta a ponta */
+    background-position: center;     /* Centraliza a foto */
+    background-repeat: no-repeat;    /* Impede que a foto se duplique */
+    
+    width: 100%;                     /* Ocupa a largura total do ecrã */
+    padding: 100px 20px;             /* Altura ampliada para revelar muito mais a imagem */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3.2rem;               /* Título maior e imponente */
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+    color: #ffffff;
+    /* Sombra forte nas letras para destacar o texto sobre a foto */
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8); 
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+    color: #ffffff;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Menu de Navegação */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 6px 10px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.4); /* Botões com fundo escuro translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav a:hover {
+    background-color: #198754;       /* Torna-se verde ao passar o rato */
+    color: #ffffff;
+    border-color: #198754;
+    transform: translateY(-2px);     /* Efeito de flutuar levemente */
+}
+
+/* Container do Conteúdo Principal */
+main {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Blocos de Conteúdo (Cards das Seções) */
+.bloco-conteudo {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+    border-top: 4px solid #198754; /* Detalhe verde no topo do card */
+}
+
+.bloco-conteudo h2 {
+    color: #0f5132;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+/* Configuração de Imagens dentro das Seções */
+.img-secao {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.paragrafo-introducao {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    color: #1a202c;
+}
+
+/* Listas Marcadoras Customizadas */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 28px;
+    font-size: 1rem;
+    color: #4a5568;
+    text-align: left; 
+}
+
+ul li::before {
+    content: "🌱"; /* Ícone de broto no lugar dos pontos pretos */
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Bloco de Debate */
+.bloco-debate {
+    background-color: #e8f5e9;
+    border-left: 6px solid #0f5132;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.bloco-debate h3 {
+    color: #0f5132;
+    margin-bottom: 8px;
+}
+
+/* ========================================================== */
+/* ESTILIZAÇÃO DO NOVO BOTÃO DO WHATSAPP (CENTRALIZADO)       */
+/* ========================================================== */
+.container-botao {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#btnMensagem {
+    display: inline-block;
+    text-decoration: none; /* Remove o sublinhado de link */
+    background-color: #198754; /* Cor verde padrão do botão */
+    color: #ffffff;
+    padding: 15px 38px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(25, 135, 84, 0.25);
+    transition: all 0.2s ease;
+}
+
+#btnMensagem:hover {
+    background-color: #25d366; /* Muda para a cor oficial do WhatsApp ao passar o rato */
+    transform: translateY(-3px); /* Flutua um pouco mais alto */
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a202c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+footer strong {
+    color: #81c784;
+}
